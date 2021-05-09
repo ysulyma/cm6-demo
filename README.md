@@ -50,7 +50,7 @@ To compile the Remotion code:
 
 ```bash
 cd remotion
-./node_modules/.bin/webpack --watch
+../node_modules/.bin/webpack --watch
 ```
 
 ## Tips
