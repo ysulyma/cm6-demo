@@ -34,7 +34,7 @@ To view the code recording, change `src/production/media-url.ts` to export `"."`
 NODE_ENV=production webpack
 ```
 
-You should also remove the `rp-recording` tags from `index.html`, or else your viewers will get harassed about being asked for audio permissions. Probably there is a cleaner way to do this.
+You should also remove the `rp-recording` tags from `index.html`, or else your viewers will get harassed about being asked for audio permissions. Probably there is a cleaner way to do this with webpack.
 
 ## Mastering
 
