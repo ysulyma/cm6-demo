@@ -19,7 +19,7 @@ import {useStore} from "../src/store";
 import {RemotionBridge} from "./bridge";
 
 const fps = 30;
-const durationInFrames = fps * 100;
+const durationInFrames = fps * 131; // hardcode duration bc it's 4:30am
 
 function Demo() {
   const ref = useRef<PlayerRef>();
@@ -87,9 +87,9 @@ export function HTMLBooth(props: {
     iframe.current.srcdoc = active.current.state.doc.toString();
   }, []);
 
-  const handleReplay = useCallback(key => {
+  const handleReplay = useCallback((key, doc) => {
     if (useStore.getState().pane === "replay") {
-      iframe.current.srcdoc = replayRef.current.state.doc.toString();
+      iframe.current.srcdoc = doc.toString();
     }
   }, []);
 
